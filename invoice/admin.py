@@ -28,6 +28,7 @@ class InterpreterResource(ModelResource):
 class InterpreterAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = ("name", "payment", "center", "amount")
     list_filter = ("center", "payment")
+    search_fields = ("name",)
     resource_class = InterpreterResource
 
 
@@ -117,6 +118,7 @@ class CallLogAdmin(ImportExportMixin, admin.ModelAdmin):
         "Customer_Name",
         "Call_Time",
     )
+    search_fields = ["Interpreter_Name", "Customer_Name"]
     resource_class = CallLogResource
 
 
