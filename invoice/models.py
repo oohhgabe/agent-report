@@ -21,17 +21,17 @@ class Interpreter(models.Model):
         ("WWI Spanish", "WWI Spanish"),
     ]
 
-    name = models.CharField("Name", max_length=255)
-    payment = models.CharField(
+    Name = models.CharField("Name", max_length=255)
+    Payment_Method = models.CharField(
         "Payment Method", max_length=50, blank=True, choices=PAYMENT_CHOICES
     )
-    center = models.CharField(
+    Service_Center = models.CharField(
         "Service Center", max_length=50, blank=True, choices=CENTER_CHOICES
     )
-    amount = models.FloatField("Total Amount", null=True)
+    Total_Amount = models.FloatField("Total Amount", null=True)
 
     def __str__(self):
-        return self.name
+        return self.Name
 
 
 class CallLog(models.Model):
