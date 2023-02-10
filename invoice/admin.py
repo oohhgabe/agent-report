@@ -1,28 +1,53 @@
 from decimal import Decimal
 from django.contrib import admin
+from import_export import fields
 from import_export.admin import ImportExportMixin
 from import_export.resources import ModelResource
+from import_export.widgets import Widget
 
 
 from .models import CallLog, Interpreter
 import pandas as pd
 
 
+class PaymentChoiceWidget(Widget):
+    def clean(self, value, row=None, *args, **kwargs):
+        for choice in Interpreter.PAYMENT_CHOICES:
+            if choice[1] == value:
+                return choice[0]
+        return value
+
+
+class CenterChoiceWidget(Widget):
+    def clean(self, value, row=None, *args, **kwargs):
+        for choice in Interpreter.CENTER_CHOICES:
+            if choice[1] == value:
+                return choice[0]
+        return value
+
+
+class ExportInterpreterResource(ModelResource):
+    class Meta:
+        model = Interpreter
+        fields = ("name", "payment", "center", "amount")
+
+
 class InterpreterResource(ModelResource):
+    payment = fields.Field(
+        column_name="payment",
+        attribute="payment",
+        widget=PaymentChoiceWidget(),
+    )
+    center = fields.Field(
+        column_name="center",
+        attribute="center",
+        widget=CenterChoiceWidget(),
+    )
+
     class Meta:
         model = Interpreter
         import_id_fields = ("name",)
-        fields = (
-            "name",
-            "payment",
-            "center",
-        )
-
-    def before_import(self, dataset, using_transactions, dry_run, **kwargs):
-        print(type(dataset))
-        df = pd.DataFrame(dataset.dict)
-        print(df.head(10))
-        return super().before_import(dataset, using_transactions, dry_run, **kwargs)
+        fields = ("name", "payment", "center", "amount")
 
 
 class InterpreterAdmin(ImportExportMixin, admin.ModelAdmin):
@@ -31,8 +56,11 @@ class InterpreterAdmin(ImportExportMixin, admin.ModelAdmin):
     search_fields = ("name",)
     resource_class = InterpreterResource
 
+    def get_export_resource_class(self):
+        return ExportInterpreterResource
 
-class CallLogResource(ModelResource):
+
+class ImportCallLogResource(ModelResource):
     class Meta:
         model = CallLog
         import_id_fields = ("CallId",)
@@ -109,6 +137,19 @@ class CallLogResource(ModelResource):
         ]
 
 
+class ExportCallLogResource(ModelResource):
+    class Meta:
+        model = CallLog
+        fields = (
+            "Interpreter_Name",
+            "Language",
+            "Interpreter_Pay",
+            "Interpreter_Calltime",
+            "Call_Time",
+            "CallId",
+        )
+
+
 class CallLogAdmin(ImportExportMixin, admin.ModelAdmin):
     list_display = (
         "Interpreter_Name",
@@ -118,8 +159,15 @@ class CallLogAdmin(ImportExportMixin, admin.ModelAdmin):
         "Customer_Name",
         "Call_Time",
     )
+
     search_fields = ["Interpreter_Name", "Customer_Name"]
-    resource_class = CallLogResource
+    resource_class = ImportCallLogResource
+
+    def get_export_resource_class(self):
+        return ExportCallLogResource
+
+    def get_import_resource_class(self):
+        return ImportCallLogResource
 
 
 admin.site.register(Interpreter, InterpreterAdmin)
