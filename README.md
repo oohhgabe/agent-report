@@ -91,3 +91,5 @@ Create an account with the credentials of your liking, and lastly type:
 Note, for Windows users, instead of typing `python`, simply type `py`.
 
 **If everything was successful, a link will be provided in the terminal. Simply copy and paste in your browser and login with your credentials**
+
+Note, if any issues arise, simply click `CTRL C` to stop the server. Then, type `python manage.py runserver` and refresh your browser.
