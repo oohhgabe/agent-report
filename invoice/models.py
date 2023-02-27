@@ -29,6 +29,7 @@ class Interpreter(models.Model):
         "Service Center", max_length=50, blank=True, choices=CENTER_CHOICES
     )
     Total_Amount = models.FloatField("Total Amount", null=True)
+    Total_Minutes = models.IntegerField("Total Minutes", null=True)
 
     def __str__(self):
         return self.Name
