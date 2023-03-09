@@ -9,13 +9,13 @@ class Interpreter(models.Model):
         ("Gusto", "Gusto"),
         ("Michael Kings OPI Services", "Michael Kings OPI Services"),
         ("QBD", "QBD"),
-        ("Sergio Call Center", "Sergio Call Center"),
+        ("Universal Call Center", "Universal Call Center"),
         ("Trolly", "Trolly"),
         ("VIP Call Center", "VIP Call Center"),
     ]
     CENTER_CHOICES = [
         ("Michael Kings OPI Services", "Michael Kings OPI Services"),
-        ("Sergio Call Center", "Sergio Call Center"),
+        ("Universal Call Center", "Universal Call Center"),
         ("VIP Call Center", "VIP Call Center"),
         ("WWI Foreign", "WWI Foreign"),
         ("WWI Spanish", "WWI Spanish"),

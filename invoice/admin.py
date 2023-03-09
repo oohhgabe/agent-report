@@ -295,7 +295,7 @@ def get_total_pay(modeladmin, request, queryset):
 
 
 export_selected_call_logs.short_description = "Export selected call logs to XLSX"
-export_sergio_center.short_description = "Export selected rows to Sergio's Format"
+export_sergio_center.short_description = "Export selected rows to Universal's Format"
 get_total_pay.short_description = "Obtain total pay for selected call logs"
 
 
