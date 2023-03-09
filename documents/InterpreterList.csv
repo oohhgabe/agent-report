@@ -1,67 +1,20 @@
 ﻿Name,Payment Method,Service Center
-Ruben Del Rosario,Michael Kings OPI Services,Michael Kings OPI Services
-Aridio Deleon,Michael Kings OPI Services,Michael Kings OPI Services
-Eva Hernandez,Michael Kings OPI Services,Michael Kings OPI Services
-Juana Herrera,Michael Kings OPI Services,Michael Kings OPI Services
-Racel Martinez,Michael Kings OPI Services,Michael Kings OPI Services
-Alfredo Oguisten,Michael Kings OPI Services,Michael Kings OPI Services
-Henry Ramirez,Michael Kings OPI Services,Michael Kings OPI Services
-Miguel A. Reyes,Michael Kings OPI Services,Michael Kings OPI Services
-Rafael Velasques,Michael Kings OPI Services,Michael Kings OPI Services
-Juan Aradillas,VIP Call Center,VIP Call Center
-Itzel Arevalo,VIP Call Center,VIP Call Center
-Adrian Castrejon,VIP Call Center,VIP Call Center
-Diana Cigarroa,VIP Call Center,VIP Call Center
-Mayrim  Dominguez,VIP Call Center,VIP Call Center
-Ramses Gonzalez,VIP Call Center,VIP Call Center
-Cesar Montiel,VIP Call Center,VIP Call Center
-German Moreno,VIP Call Center,VIP Call Center
-Alan Nieto,VIP Call Center,VIP Call Center
-Alondra Padilla,VIP Call Center,VIP Call Center
-Carmen Ramirez,VIP Call Center,VIP Call Center
-Iveth Rodriguez,VIP Call Center,VIP Call Center
-Rogelio Sanchez,VIP Call Center,VIP Call Center
-Sylvia Suarez,VIP Call Center,VIP Call Center
-Andre Triana,VIP Call Center,VIP Call Center
-Emily Agami,Sergio Call Center,Sergio Call Center
-Francisco Ballestero,Sergio Call Center,Sergio Call Center
-Joshua Bautista,Sergio Call Center,Sergio Call Center
-Andrea Cortes,Sergio Call Center,Sergio Call Center
-Cindy Dorantes,Sergio Call Center,Sergio Call Center
-Brianda Esquivel,Sergio Call Center,Sergio Call Center
-Braulio Garcia,Sergio Call Center,Sergio Call Center
-Israel Ivan Fernandez,Sergio Call Center,Sergio Call Center
-Soledad Garcia,Sergio Call Center,Sergio Call Center
-Javier Granillo,Sergio Call Center,Sergio Call Center
-Erika Juarez,Sergio Call Center,Sergio Call Center
-Maria Juarez,Sergio Call Center,Sergio Call Center
-Raquel Juarez,Sergio Call Center,Sergio Call Center
-Yolanda Mejia,Sergio Call Center,Sergio Call Center
-Felipe Mena,Sergio Call Center,Sergio Call Center
-Veronica Ramirez,Sergio Call Center,Sergio Call Center
-Alfredo Enrique Rojas,Sergio Call Center,Sergio Call Center
-Dania Roman,Sergio Call Center,Sergio Call Center
-Rafael Roque,Sergio Call Center,Sergio Call Center
-Karla Salinas,Sergio Call Center,Sergio Call Center
-Mario Sandoval,Sergio Call Center,Sergio Call Center
-Sergio Tellez,Sergio Call Center,Sergio Call Center
-Sergio Olaiz,Sergio Call Center,Sergio Call Center
-Lynn Verastegui,Sergio Call Center,Sergio Call Center
 Jonathan R. Robiou,QBD,WWI Spanish
-Pedro Avalos,QBD,WWI Spanish
+Pedro A. Avalos,QBD,WWI Spanish
 Rocio Cashwell,QBD,WWI Spanish
 Nidia Garza,QBD,WWI Spanish
 Joel Juarez,QBD,WWI Spanish
-Gonzalo Marino,QBD,WWI Spanish
+Gonzalo A. Marino,QBD,WWI Spanish
 Licsi A. Murillo,QBD,WWI Spanish
-Jorge Ratto,QBD,WWI Spanish
+Jorge A. Ratto,QBD,WWI Spanish
 Alondra Matos,QBD,WWI Spanish
 Vismar Melendez,QBD,WWI Spanish
 Pablo Romero,QBD,WWI Spanish
 Cecilia Rivas,QBD,WWI Spanish
 Jesse Sanchez,QBD,WWI Spanish
 Yesenia Troncoso,QBD,WWI Spanish
-Cristina I. Tome,QBD,WWI Spanish
+Cristina Tome,QBD,WWI Spanish
+Veronica Ramirez,QBD,WWI Spanish
 Abdiwalid Ali,QBD,WWI Foreign
 Abukar Abraham,QBD,WWI Foreign
 Afaf Attia,BCheck,WWI Foreign
@@ -73,7 +26,7 @@ Ashvin Shah,QBD,WWI Foreign
 Ayesha Rehman,QBD,WWI Foreign
 Behnam Attarian,QBD,WWI Foreign
 Biniam (Ben) Araya,QBD,WWI Foreign
-Cathy Hsiao,Gusto,WWI Foreign
+Cathy Hsiao,Trolly,WWI Foreign
 Cecile Andrade,QBD,WWI Foreign
 Chiu-Fang (Judy) Liu,QBD,WWI Foreign
 Dahsom Hamilton,QBD,WWI Foreign
@@ -130,13 +83,13 @@ Tamayo Yasukawa,QBD,WWI Foreign
 Tatiana Frybarger,QBD,WWI Foreign
 Tatiana Riley,QBD,WWI Foreign
 Tram Thu Lai,QBD,WWI Foreign
-Wesam Shahbou,,WWI Foreign
+Wesam Shahbou,BCheck,WWI Foreign
 Xiaoling Yu,BCheck,WWI Foreign
 Yasamin Pakizegi,QBD,WWI Foreign
 Zahid Imran,QBD,WWI Foreign
 Zaw P. Naing,QBD,WWI Foreign
 Zobaidah Dowllah,QBD,WWI Foreign
-Aslanian Aslan,Check,WWI Foreign
+Aslanian Aslan,BCheck,WWI Foreign
 Category A Boostlingo,BTransfer,WWI Foreign
 Category B Boostlingo,BTransfer,WWI Foreign
 Adelivia Teresa Kilpatrick,BCheck,WWI Foreign
@@ -164,10 +117,10 @@ Ahmed Sheikh,QBD,WWI Foreign
 Khalid Amarkhil,QBD,WWI Foreign
 Jacques Verme,QBD,WWI Foreign
 Sylvareste Decius,QBD,WWI Foreign
-Cathy Hsiao,Gusto,WWI Foreign
+Cathy Hsiao,Trolly,WWI Foreign
 Alessandra W. Wisniewski,QBD,WWI Foreign
 Summer Han,QBD,WWI Foreign
-Pham Ny Ny Nguyen,BTransfer,WWI Foreign
+Pham Ny Ny Nguyen,QBD,WWI Foreign
 Mohammad Abu Tahir,BTransfer,WWI Foreign
 Mauro Blanco,BTransfer,WWI Foreign
 Jian Yasin,QBD,WWI Foreign
@@ -182,3 +135,54 @@ Tsena Dinssa,QBD,WWI Foreign
 Wesam Shahbou,BCheck,WWI Foreign
 Mesfin Zergaw,QBD,WWI Foreign
 Anh Minh Nguyen,QBD,WWI Foreign
+Keziah Desplan,QBD,WWI Foreign
+Juan Aradillas,VIP Call Center,VIP Call Center
+Itzel Arevalo,VIP Call Center,VIP Call Center
+Adrian Castrejon,VIP Call Center,VIP Call Center
+Diana Cigarroa,VIP Call Center,VIP Call Center
+Mayrim  Dominguez,VIP Call Center,VIP Call Center
+Ramses Gonzalez,VIP Call Center,VIP Call Center
+Cesar Montiel,VIP Call Center,VIP Call Center
+German Moreno,VIP Call Center,VIP Call Center
+Alan Nieto,VIP Call Center,VIP Call Center
+Alondra Padilla,VIP Call Center,VIP Call Center
+Carmen Ramirez,VIP Call Center,VIP Call Center
+Iveth Rodriguez,VIP Call Center,VIP Call Center
+Rogelio Sanchez,VIP Call Center,VIP Call Center
+Sylvia Suarez,VIP Call Center,VIP Call Center
+Andre Triana,VIP Call Center,VIP Call Center
+Emily Agami,Universal Call Center,Universal Call Center
+Francisco Ballestero,Universal Call Center,Universal Call Center
+Joshua Bautista,Universal Call Center,Universal Call Center
+Andrea Cortes,Universal Call Center,Universal Call Center
+Cindy Dorantes,Universal Call Center,Universal Call Center
+Brianda Esquivel,Universal Call Center,Universal Call Center
+Braulio Garcia,Universal Call Center,Universal Call Center
+Israel Ivan Fernandez,Universal Call Center,Universal Call Center
+Soledad Garcia,Universal Call Center,Universal Call Center
+Javier Granillo,Universal Call Center,Universal Call Center
+Erika Juarez,Universal Call Center,Universal Call Center
+Maria Juarez,Universal Call Center,Universal Call Center
+Raquel Juarez,Universal Call Center,Universal Call Center
+Yolanda Mejia,Universal Call Center,Universal Call Center
+Felipe Mena,Universal Call Center,Universal Call Center
+Alfredo Enrique Rojas,Universal Call Center,Universal Call Center
+Dania Roman,Universal Call Center,Universal Call Center
+Rafael Roque,Universal Call Center,Universal Call Center
+Karla Salinas,Universal Call Center,Universal Call Center
+Mario Sandoval,Universal Call Center,Universal Call Center
+Sergio Tellez,Universal Call Center,Universal Call Center
+Sergio Olaiz,Universal Call Center,Universal Call Center
+Lynn Verastegui,Universal Call Center,Universal Call Center
+Pablo Rodriguez,Universal Call Center,Universal Call Center
+Fernando Munoz,Universal Call Center,Universal Call Center
+Alfredo Enrique Rojas,Universal Call Center,Universal Call Center
+Ruben Del Rosario,Michael Kings OPI Services,Michael Kings OPI Services
+Aridio Deleon,Michael Kings OPI Services,Michael Kings OPI Services
+Eva Hernandez,Michael Kings OPI Services,Michael Kings OPI Services
+Juana Herrera,Michael Kings OPI Services,Michael Kings OPI Services
+Racel Martinez,Michael Kings OPI Services,Michael Kings OPI Services
+Alfredo Oguisten,Michael Kings OPI Services,Michael Kings OPI Services
+Henry Ramirez,Michael Kings OPI Services,Michael Kings OPI Services
+Miguel Reyes,Michael Kings OPI Services,Michael Kings OPI Services
+Rafael Velasques,Michael Kings OPI Services,Michael Kings OPI Services
