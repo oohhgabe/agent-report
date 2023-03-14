@@ -1,10 +1,11 @@
 from decimal import Decimal
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.db.models import Q
 from django.http import HttpResponse
+from django.utils.translation import gettext_lazy as _
 from functools import reduce
 from import_export import fields
-from import_export.admin import ImportExportMixin
+from import_export.admin import ImportExportMixin, ImportForm
 from import_export.resources import ModelResource
 from import_export.widgets import Widget
 from io import BytesIO
@@ -14,6 +15,10 @@ from operator import or_
 from .models import CallLog, Interpreter
 import pandas as pd
 
+class CustomImportExportMixin(ImportExportMixin):
+    def import_action(self, request, *args, **kwargs):
+        messages.warning(request, _('Once the SUBMIT button is clicked, please wait until imported data is shown below. Then, click CONFIRM IMPORT and wait to be redirected.'))
+        return super().import_action(request, *args, **kwargs)
 
 class PaymentChoiceWidget(Widget):
     def clean(self, value, row=None, *args, **kwargs):
@@ -214,6 +219,7 @@ class ExportCallLogResource(ModelResource):
             "Interpreter_Calltime",
             "Call_Time",
             "CallId",
+            "Service_Center"
         )
 
     def get_export_fields(self):
@@ -294,12 +300,24 @@ def get_total_pay(modeladmin, request, queryset):
     modeladmin.message_user(request, message)
 
 
+def update_service_center(modeladmin, request, queryset):
+    for call in queryset:
+        try:
+            interpreter = Interpreter.objects.get(Name=call.Interpreter_Name)
+        except Interpreter.DoesNotExist:
+            continue
+        
+        call.Service_Center = interpreter.Service_Center
+        call.save()
+    
+    modeladmin.message_user(request, "The Service Center has been updated for the selected rows.")
+    
 export_selected_call_logs.short_description = "Export selected call logs to XLSX"
 export_sergio_center.short_description = "Export selected rows to Universal's Format"
 get_total_pay.short_description = "Obtain total pay for selected call logs"
+update_service_center.short_description = "Update Service Center"
 
-
-class CallLogAdmin(ImportExportMixin, admin.ModelAdmin):
+class CallLogAdmin(CustomImportExportMixin, admin.ModelAdmin):
     list_display = (
         "Interpreter_Name",
         "Language",
@@ -307,10 +325,12 @@ class CallLogAdmin(ImportExportMixin, admin.ModelAdmin):
         "Interpreter_Calltime",
         "Customer_Name",
         "Call_Time",
+        "Service_Center",
     )
 
-    actions = [export_selected_call_logs, export_sergio_center, get_total_pay]
+    actions = [export_selected_call_logs, export_sergio_center, get_total_pay, update_service_center]
     search_fields = ["Interpreter_Name", "Customer_Name"]
+    list_filter = ("Service_Center",)
     resource_class = ImportCallLogResource
 
     def get_export_resource_class(self):

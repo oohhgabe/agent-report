@@ -45,6 +45,9 @@ class CallLog(models.Model):
     )
     Interpreter_Name = models.CharField("Interpreter Name", max_length=255, blank=True)
     Customer_Name = models.CharField("Customer Name", max_length=255, blank=True)
+    Service_Center = models.CharField(
+        "Service Center", max_length=50, blank=True,
+    )
 
     def __str__(self):
         return self.Interpreter_Name
